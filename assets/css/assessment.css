@@ -1,0 +1,10 @@
+/* Custom styles overwriting bootstrap defaults */
+
+.error-text {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.boundry-grouping {
+	font-family: "Courier New", Courier, monospace;
+}

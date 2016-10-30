@@ -1,0 +1,386 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"xml",
+				"xmlObject"
+			],
+			[
+				"User",
+				"UserProcessor"
+			],
+			[
+				"array",
+				"arrayIn"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"file",
+				"filepath"
+			],
+			[
+				"file_",
+				"file_get_contents"
+			],
+			[
+				"shuff",
+				"shuffleDeck"
+			],
+			[
+				"facto",
+				"factoryTable"
+			],
+			[
+				"shu",
+				"shuffledTable"
+			],
+			[
+				"deal",
+				"dealHand\t(table.php)"
+			],
+			[
+				"pla",
+				"playerIndex"
+			],
+			[
+				"dea",
+				"dealHand\t(table.php)"
+			],
+			[
+				"fact",
+				"factoryTable"
+			],
+			[
+				"factor",
+				"factoryHand"
+			],
+			[
+				"play",
+				"players"
+			],
+			[
+				"num",
+				"numPlayers"
+			],
+			[
+				"shuffl",
+				"shuffleDeck"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"stat",
+				"static"
+			],
+			[
+				"Card",
+				"CardFactory\t(card.php)"
+			],
+			[
+				"em",
+				"email_display"
+			],
+			[
+				"game",
+				"game-holder\t(index.php)"
+			],
+			[
+				"update",
+				"update_score"
+			],
+			[
+				"index",
+				"indexString"
+			],
+			[
+				"prev",
+				"prevButton"
+			],
+			[
+				"butt",
+				"buttonId"
+			],
+			[
+				"active",
+				"active_button_id"
+			],
+			[
+				"reset",
+				"reset_active_button"
+			],
+			[
+				"button",
+				"button_val"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"text",
+				"text-center"
+			],
+			[
+				"grid",
+				"grid_size"
+			],
+			[
+				"start",
+				"starting_numbers"
+			],
+			[
+				"wid",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/wamp/www/assessment"
+	],
+	"file_history":
+	[
+		"/D/wamp/www/assessment/config.php",
+		"/D/wamp/bin/apache/apache2.4.18/conf/extra/httpd-vhosts.conf",
+		"/D/wamp/bin/apache/apache2.4.18/conf/httpd.conf",
+		"/D/wamp/www/filerw/src/UserProcessor.php",
+		"/D/wamp/www/filerw/index.php",
+		"/D/wamp/www/order/index.php",
+		"/D/wamp/www/add_vhost.php",
+		"/D/wamp/www/filerw - Copy/index.php",
+		"/D/wamp/www/filerw/data/users.xml",
+		"/D/wamp/www/filerw/data/sortedUsers.xml",
+		"/D/wamp/www/filerw/data/sortedUsers.json",
+		"/D/wamp/www/filerw/data/sortedUsers.csv",
+		"/D/wamp/www/filerw/index_old.php",
+		"/D/wamp/www/filerw/README.md",
+		"/D/wamp/www/filerw/data/users.csv",
+		"/D/wamp/www/filerw/composer.lock",
+		"/D/Downloads/php-task-master/README.md",
+		"/D/wamp/www/filerw/examples/users.json",
+		"/D/wamp/www/deck/classes/table.php",
+		"/D/wamp/www/deck/classes/deck.php",
+		"/D/wamp/www/deck/classes/card.php",
+		"/D/wamp/www/deck/assets/js/deck.js",
+		"/D/wamp/www/deck/classes/player.php",
+		"/D/wamp/www/deck/text-based.php",
+		"/D/Downloads/php-task-master/composer.json",
+		"/D/wamp/www/order/assets/js/orders.js",
+		"/D/wamp/www/deck/assets/css/deck.css",
+		"/D/wamp/www/deck/config.php",
+		"/D/wamp/www/deck/inc/page_begin.php",
+		"/D/wamp/www/order/assets/css/order.css",
+		"/D/wamp/www/deck/inc/page_end.php",
+		"/D/wamp/www/order/inc/page_end.php",
+		"/D/wamp/www/order/inc/page_begin.php",
+		"/D/wamp/www/order/config.php",
+		"/D/wamp/www/order/inc/script_start.php",
+		"/D/wamp/www/order/inc/navigation.php",
+		"/D/wamp/www/order/.htaccess",
+		"/D/wamp/www/sand/config.php",
+		"/D/wamp/www/order/functions/function_loader.php",
+		"/D/wamp/www/sand/index.php",
+		"/D/wamp/www/order/assets/js/sand.js",
+		"/D/wamp/www/order/assets/js/ie10-viewport-bug-workaround.js",
+		"/D/wamp/www/sand/inc/page_end.php",
+		"/D/wamp/www/sand/inc/page_begin.php",
+		"/D/wamp/www/sand/assets/css/sand.css",
+		"/D/wamp/www/sand/inc/navigation.php",
+		"/D/wamp/www/sand/assets/css/bootstrap.min.css",
+		"/D/wamp/www/sand/assets/js/npm.js",
+		"/D/Downloads/bootstrap-4.0.0-alpha.2/dist/js/npm.js",
+		"/D/wamp/www/sand/inc/security.php",
+		"/D/wamp/www/sand/inc/script_start.php",
+		"/D/wamp/www/sand/functions/function_loader.php",
+		"/D/wamp/www/sand/assets/js/sand.js",
+		"/D/wamp/www/sand/bs_4.html",
+		"/D/wamp/www/sand/.htaccess",
+		"/D/wamp/www/sand/composer.json",
+		"/D/wamp/www/sand/vendor/autoload.php",
+		"/D/wamp/www/sand/themes/sb_clean_blog_1.0.4/js/clean-blog.js",
+		"/D/wamp/www/sand/themes/sb_clean_blog_1.0.4/js/bootstrap.js",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/wamp/www/sand/composer.phar"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			");\n",
+			"echo",
+			"factoryTable",
+			"\">\n",
+			"origin",
+			"email",
+			"name",
+			"hidden",
+			"});;\n",
+			"override",
+			"VirtualHost",
+			"xl",
+			"6"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"table",
+			"Start",
+			"md"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "assessment.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 250.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
