@@ -4,6 +4,130 @@
 		"selected_items":
 		[
 			[
+				"acti",
+				"activeYear"
+			],
+			[
+				"boundrylimit",
+				"boundryLimitFactory"
+			],
+			[
+				"bo",
+				"boundrylimit\t(boundryLimitFactory.php)"
+			],
+			[
+				"lower",
+				"lower_limit\t(boundryLimit.php)"
+			],
+			[
+				"getBoun",
+				"getBoundryLimit\t(boundryLimitFactory.php)"
+			],
+			[
+				"upper",
+				"upper_limit"
+			],
+			[
+				"y",
+				"yearFactory"
+			],
+			[
+				"grouping",
+				"groupingSets"
+			],
+			[
+				"page_Re",
+				"page_request_clean\t(index.php)"
+			],
+			[
+				"req",
+				"require_once"
+			],
+			[
+				"page",
+				"page_begin.php\t(manage_criteria.php)"
+			],
+			[
+				"require",
+				"require_once\t(manage_criteria.php)"
+			],
+			[
+				"criter",
+				"criteriaFactory"
+			],
+			[
+				"crit",
+				"criteria"
+			],
+			[
+				"status",
+				"statusDesc"
+			],
+			[
+				"cri",
+				"criteria"
+			],
+			[
+				"Crit",
+				"CriteriaFactory\t(criteriaFactory.php)"
+			],
+			[
+				"err",
+				"error_text\t(register.php)"
+			],
+			[
+				"sess",
+				"session_id"
+			],
+			[
+				"_",
+				"_SERVER"
+			],
+			[
+				"last",
+				"last_name_display\t(register.php)"
+			],
+			[
+				"first_n",
+				"first_name_display\t(register.php)"
+			],
+			[
+				"VA",
+				"Validation\t(validation.php)"
+			],
+			[
+				"error",
+				"error_str"
+			],
+			[
+				"aut",
+				"auth_user\t(login.php)"
+			],
+			[
+				"scri",
+				"script_end_db"
+			],
+			[
+				"scrip",
+				"script_start_db"
+			],
+			[
+				"script",
+				"script_start"
+			],
+			[
+				"script_st",
+				"script_start_time"
+			],
+			[
+				"session",
+				"session_id"
+			],
+			[
+				"auth",
+				"auth_user"
+			],
+			[
 				"xml",
 				"xmlObject"
 			],
@@ -143,6 +267,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/views/manage_boundries.php",
+			"settings":
+			{
+				"buffer_size": 5727,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/controllers/manage_boundries.php",
+			"settings":
+			{
+				"buffer_size": 4332,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -160,7 +302,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 512.0
+		"width": 432.0
 	},
 	"console":
 	{
@@ -181,16 +323,71 @@
 	},
 	"expanded_folders":
 	[
-		"/D/wamp/www/assessment"
+		"/D/wamp/www/assessment",
+		"/D/wamp/www/assessment/assets",
+		"/D/wamp/www/assessment/classes",
+		"/D/wamp/www/assessment/inc",
+		"/D/wamp/www/assessment/www",
+		"/D/wamp/www/assessment/www/controllers",
+		"/D/wamp/www/assessment/www/views"
 	],
 	"file_history":
 	[
+		"/D/wamp/www/assessment/www/views/manage_years.php",
+		"/D/wamp/www/assessment/www/views/manage_criteria.php",
+		"/D/wamp/www/assessment/www/controllers/manage_years.php",
+		"/D/wamp/www/assessment/inc/page_begin.php",
+		"/D/wamp/www/assessment/classes/boundryLimit.php",
+		"/D/wamp/www/assessment/www/controllers/manage_boundries.php",
+		"/D/wamp/www/assessment/www/views/manage_boundries.php",
+		"/D/wamp/www/assessment/index.php",
+		"/D/wamp/www/assessment/classes/boundryLimitFactory.php",
+		"/D/wamp/logs/mysql_general.log",
+		"/D/wamp/www/assessment/classes/boundryFactory.php",
+		"/D/wamp/www/assessment/classes/year.php",
+		"/D/wamp/www/assessment/assets/css/assessment.css",
+		"/D/wamp/www/assessment/classes/yearFactory.php",
+		"/D/wamp/www/assessment/classes/boundry.php",
+		"/D/wamp/www/assessment/inc/script_secure.php",
+		"/D/wamp/www/assessment/www/error_pages/404.php",
+		"/D/wamp/www/assessment/www/error_pages/generic.php",
+		"/D/wamp/www/assessment/www/views/register.php",
+		"/D/wamp/www/assessment/www/views/logout.php",
+		"/D/wamp/www/assessment/www/views/login.php",
+		"/D/wamp/www/assessment/inc/clean_page_begin.php",
+		"/D/wamp/www/assessment/inc/function_lib.php",
+		"/D/wamp/www/assessment/www/controllers/register.php",
+		"/D/wamp/www/assessment/www/controllers/login.php",
+		"/D/wamp/www/assessment/classes/validation.php",
+		"/D/wamp/www/assessment/classes/criteriaFactory.php",
+		"/D/wamp/www/assessment/www/controllers/manage_criteria.php",
+		"/D/wamp/www/assessment/classes/criteria.php",
+		"/D/wamp/www/assessment/classes/security.php",
+		"/D/wamp/www/assessment/classes/user.php",
+		"/D/wamp/www/assessment/classes/userFactory.php",
+		"/D/wamp/www/assessment/www/controllers/logout.php",
 		"/D/wamp/www/assessment/config.php",
+		"/D/wamp/www/assessment/www/.htaccess",
+		"/D/wamp/www/assessment/.htaccess",
+		"/D/wamp/www/assessment/inc/log.php",
+		"/D/wamp/bin/mysql/mysql5.7.11/my.ini",
+		"/D/wamp/logs/mysql.log",
+		"/D/wamp/www/assessment/manifest.json",
+		"/D/wamp/www/assessment/browserconfig.xml",
+		"/D/wamp/www/deck/classes/card.php",
+		"/D/wamp/www/assessment/classes/basic.php",
+		"/D/wamp/www/assessment/composer.json",
+		"/D/wamp/www/filerw/composer.json",
+		"/D/wamp/www/filerw/index.php",
+		"/D/wamp/www/filerw/vendor/autoload.php",
+		"/D/wamp/www/order/index.php",
+		"/D/wamp/www/assessment/assets/js/assessment.js",
+		"/D/wamp/www/assessment/inc/page_end.php",
+		"/D/wamp/www/assessment/inc/db_connect.php",
+		"/D/wamp/www/assessment/inc/db_connect",
 		"/D/wamp/bin/apache/apache2.4.18/conf/extra/httpd-vhosts.conf",
 		"/D/wamp/bin/apache/apache2.4.18/conf/httpd.conf",
 		"/D/wamp/www/filerw/src/UserProcessor.php",
-		"/D/wamp/www/filerw/index.php",
-		"/D/wamp/www/order/index.php",
 		"/D/wamp/www/add_vhost.php",
 		"/D/wamp/www/filerw - Copy/index.php",
 		"/D/wamp/www/filerw/data/users.xml",
@@ -205,7 +402,6 @@
 		"/D/wamp/www/filerw/examples/users.json",
 		"/D/wamp/www/deck/classes/table.php",
 		"/D/wamp/www/deck/classes/deck.php",
-		"/D/wamp/www/deck/classes/card.php",
 		"/D/wamp/www/deck/assets/js/deck.js",
 		"/D/wamp/www/deck/classes/player.php",
 		"/D/wamp/www/deck/text-based.php",
@@ -249,20 +445,45 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"Criteria",
+			"criteria",
+			"Criteria",
+			"criteria",
+			"Boundry",
+			"Bundry",
+			"boundry",
+			"criteria",
+			"Criteria",
+			"criteria",
+			"Criteria",
+			"criteriaSet",
+			"CriteriaFactory",
+			"INSERT INTO `au_criter",
+			"au_criter",
+			"getUserDB",
+			"getCriteriaDB",
+			"user",
+			"$session_id",
+			"insert",
+			"general-log",
+			"log",
+			"WEB_ROOT",
+			"hash",
 			");\n",
 			"echo",
 			"factoryTable",
@@ -283,6 +504,18 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Year",
+			"year",
+			"Year",
+			"year",
+			"Year",
+			"year",
+			"boundry",
+			"Boundry",
+			"boundry",
+			"Boundry",
+			"getUser",
+			"Criteria",
 			"table",
 			"Start",
 			"md"
@@ -296,8 +529,69 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/views/manage_boundries.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1173,
+								1173
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/controllers/manage_boundries.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4332,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1570,
+								1570
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -340,7 +634,7 @@
 	"project": "assessment.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -31,14 +31,17 @@ $boundryLimitFactory = new BoundryLimitFactory($pdo);
 //------------------------------------------------------------------
 // Check year
 //------------------------------------------------------------------
-$sel_year = isset($_GET['sel_year']) ? $_GET['sel_year'] : '';
-$sel_year = isset($_POST['sel_year']) ? $_POST['sel_year'] : $sel_year;
-if($sel_year == 'reset') { unset($_SESSION['sel_year']); $sel_year = ''; }
-if(isset($_SESSION['sel_year']) && $sel_year == '') { $sel_year = $_SESSION['sel_year']; }
-if($sel_year != '') { $_SESSION['sel_year'] = $sel_year; }
+$sel_year = isset($_GET['year']) ? $_GET['year'] : '';
+$sel_year = isset($_POST['year']) ? $_POST['year'] : $sel_year;
+if($sel_year == 'reset') { unset($_SESSION['year']); $sel_year = ''; }
+if(isset($_SESSION['year']) && $sel_year == '') { $sel_year = $_SESSION['year']; }
+if($sel_year != '') { $_SESSION['year'] = $sel_year; }
+
 
 // If year is empty, select the first year that was returned
-$sel_year = isset($yearSet[0]->id) ? $yearSet[0]->id : '';
+if($sel_year == '') {
+    $sel_year = isset($yearSet[0]->id) ? $yearSet[0]->id : '';
+}
 
 // Fetch active year
 $activeYear = $yearFactory->getYear($sel_year);

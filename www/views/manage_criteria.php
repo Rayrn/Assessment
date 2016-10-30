@@ -37,12 +37,14 @@ require_once APP_ROOT.'/inc/page_begin.php';
                             <?php if(!empty($criteriaSet)) {
                                 foreach($criteriaSet as $criteria) : ?>
                                     <tr>
-                                        <td><?php echo $criteria->title; ?></td>
-                                        <td>
-                                            <form method="get">
-                                                <input type="hidden" name="action" value="updateCriteria">
-                                                <input type="hidden" name="id" value="<?php echo $criteria->id; ?>">
+                                        <form method="get">
+                                            <input type="hidden" name="action" value="updateCriteria">
+                                            <input type="hidden" name="id" value="<?php echo $criteria->id; ?>">
 
+                                            <td>
+                                                <input type="text" class="form-control" name="title" id="title"  placeholder="Enter criteria title" value="<?php echo $criteria->title; ?>" />
+                                            </td>
+                                            <td>
                                                 <div class="form-group">
                                                     <select class="form-control" name="status" onchange="submit()">
                                                         <?php
@@ -54,14 +56,8 @@ require_once APP_ROOT.'/inc/page_begin.php';
                                                         ?>
                                                     </select>
                                                 </div><!-- /.form-group -->
-                                            </form>
-
-                                            <?php if($criteria->status == '3') { ?>
-                                                <a href="?action=updateCriteria&id=<?php echo $criteria->id; ?>&status=7" class="btn btn-lg btn-danger" title="Delete" alt="Delete">
-                                                    <i class="fa fa-warning"></i>
-                                                </a>
-                                            <?php } ?>
-                                        </td>
+                                            </td>
+                                        </form>
                                     </tr>
                                 <?php endforeach;
                             } else { ?>

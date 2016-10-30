@@ -31,6 +31,7 @@ require_once APP_ROOT.'/inc/page_begin.php';
                             }
                             ?>
                         </select>
+                    </form>
                 </div><!-- /.col-xs-12 -->
             </div><!-- /.row -->
 
