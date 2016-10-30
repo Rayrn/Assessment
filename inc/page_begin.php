@@ -15,7 +15,7 @@ require_once APP_ROOT.'/inc/clean_page_begin.php';
             <span class="icon-bar"></span> 
         </button>
         <div class="navbar-header">
-            <a class="navbar-brand" href="#"><?php echo SITE_BRAND; ?></a>
+            <a class="navbar-brand" href="/"><?php echo SITE_BRAND; ?></a>
         </div>
         <div class="collapse navbar-collapse" id="siteNav">
             <ul class="nav navbar-nav">
@@ -25,6 +25,7 @@ require_once APP_ROOT.'/inc/clean_page_begin.php';
                     <ul class="dropdown-menu">
                         <li <?php if($page_request_clean == 'manage_criteria') { echo 'class="active"'; } ?>><a href="manage_criteria">Manage Criteria</a>
                         <li <?php if($page_request_clean == 'manage_boundries') { echo 'class="active"'; } ?>><a href="manage_boundries">Manage Boundries</a>
+                        <li <?php if($page_request_clean == 'manage_years') { echo 'class="active"'; } ?>><a href="manage_years">Manage Years</a>
                     </ul>
                 </li>
                 <li class="dropdown">

@@ -8,6 +8,7 @@ class BoundryLimit
     public $id;
     public $boundry_id;
     public $year_id;
+    public $lower_limit;
     public $upper_limit;
     public $status;
     public $statusDesc;
@@ -17,18 +18,16 @@ class BoundryLimit
      * Create a new BoundryLimit object
      * @return void
      */
-    public function __construct($boundry_id, $year_id, $upper_limit, $status, $id = '', $create_by = '') {
+    public function __construct($boundry_id, $year_id, $lower_limit, $upper_limit, $status, $id = '', $create_by = '') {
         $this->boundry_id = $boundry_id;
         $this->year_id = $year_id;
+        $this->lower_limit = $lower_limit;
         $this->upper_limit = $upper_limit;
         $this->status = $status;
-        $this->upper_limit = $upper_limit;
-        $this->upper_limit = $upper_limit;
-        $this->upper_limit = $upper_limit;
 
         // Optional
         $this->id = $id;
-        $this->createBy = $createBy;
+        $this->createBy = $create_by;
 
         // Derived
         $this->statusDesc = $this->getStatus($status);
@@ -75,12 +74,11 @@ class BoundryLimit
      */
     public function set($prop, $val) {
         switch ($prop) {
-            case 'title':
-                $this->title = $val;
+            case 'lower_limit':
+                $this->lower_limit = $val;
                 break;
-            case 'status':
-                $this->status = $val;
-                $this->statusDesc = $this->getStatus->$val;
+            case 'upper_limit':
+                $this->upper_limit = $val;
                 break;
         }
     }

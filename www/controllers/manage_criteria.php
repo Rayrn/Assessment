@@ -33,34 +33,6 @@ if($action == 'view') {
     require_once (VIEW_ROOT.'/manage_criteria.php');
 }
 
-if($action == 'addCriteria') {
-    // Fetch Criteria details
-    $title = isset($_GET['title']) ? $_GET['title'] : '';
-    $title = isset($_POST['title']) ? $_POST['title'] : $title;
-
-    // Instantiate error string
-    $error_str = '';
-
-    if(!Validation::notBlank($title)) {
-        $title = '';
-        $error_str .= "Title can't be empty<br/>";
-    }
-
-    if($error_str != '') {
-        // Display form
-        require_once (VIEW_ROOT.'/login.php');
-    } else {
-        $criteriaFactory->newCriteria($title, $auth_user);
-
-        // Log request
-        require_once APP_ROOT.'/inc/log.php';
-
-        // Send to index
-        header ('Location: /manage_criteria');
-        exit();
-    }
-}
-
 if($action == 'updateCriteria') {
     // Fetch Criteria details
     $id = isset($_GET['id']) ? $_GET['id'] : '';

@@ -22,18 +22,18 @@ require_once APP_ROOT.'/inc/page_begin.php';
         <div class="col-md-6 col-md-offset-3">
             <div class="row ">
                 <div class="col-xs-12">
-                    <form method="get">
+                    <form method="get" class="pull-right">
                         <select class="form-control" name="year" onchange="submit()">
                             <?php
-                            foreach($options_array as $value=>$description) {
-                                $selected = $criteria->status == $value ? 'selected' : '';
-                                echo "<option value='$value' $selected>$description</option>";
+                            foreach($yearSet as $year) {
+                                $selected = $year->id == $sel_year ? 'selected' : '';
+                                echo "<option value='{$year->id}' $selected>{$year->title}</option>";
                             }
                             ?>
                         </select>
                 </div><!-- /.col-xs-12 -->
             </div><!-- /.row -->
-            
+
             <div class="row ">
                 <div class="col-xs-12">
                     <?php if(isset($error_str) && $error_str != '') { ?>
@@ -45,7 +45,9 @@ require_once APP_ROOT.'/inc/page_begin.php';
                             <tr>
                                 <th class="col-xs-1">Grouping</th>
                                 <th class="col-xs-6">Title</th>
-                                <th class="col-xs-5">Limit</th>
+                                <th class="col-xs-2">Lower</th>
+                                <th class="col-xs-2">Higher</th>
+                                <th class="col-xs-1"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -54,8 +56,8 @@ require_once APP_ROOT.'/inc/page_begin.php';
                                     <tr>
                                         <form method="get">
                                             <input type="hidden" name="action" value="updateBoundry">
-                                            <input type="hidden" name="id" value="<?php echo $boundry->id; ?>">
-
+                                            <input type="hidden" name="boundry_id" value="<?php echo $boundry->id; ?>">
+                                            <input type="hidden" name="limit_id" value="<?php echo isset($boundry->limitData->id) ? $boundry->limitData->id : ''; ?>">
                                             <td>
                                                 <table class="boundry-grouping">
                                                     <?php foreach($boundry->groupingSets as $set) { ?>
@@ -72,8 +74,18 @@ require_once APP_ROOT.'/inc/page_begin.php';
                                             </td>
                                             <td>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="upper" id="upper"  placeholder="Enter boundry limit" value="<?php echo ''; ?>" />
+                                                    <input type="text" class="form-control" name="lower" id="lower" value="<?php echo isset($boundry->limitData->lower_limit) ? $boundry->limitData->lower_limit : ''; ?>" />
                                                 </div><!-- /.form-group -->
+                                            </td>
+                                            <td>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="upper" id="upper"  value="<?php echo isset($boundry->limitData->upper_limit) ? $boundry->limitData->upper_limit : ''; ?>" />
+                                                </div><!-- /.form-group -->
+                                            </td>
+                                            <td>
+                                                <button type="submit" class="btn btn-success" title="Save" alt="Save">
+                                                    <i class="fa fa-check"></i>
+                                                </a>
                                             </td>
                                         </form>
                                     </tr>

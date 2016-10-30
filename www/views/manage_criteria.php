@@ -74,51 +74,6 @@ require_once APP_ROOT.'/inc/page_begin.php';
                 </div><!-- /.col-xs-12 -->
             </div><!-- /.row -->
         </div><!-- /.col-md-6 col-md-offset-3 -->
-
-        <div class="col-md-6 col-md-offset-3">
-            <div class="row">
-                <div class="col-xs-12">
-                    <button type="button" class="btn btn-success pull-right" data-toggle="collapse" data-target="#add-criteria-form">Add new criteria</button>
-                </div>
-                <div class="col-xs-12 collapse" id="add-criteria-form">
-                    <form method="get">
-                        
-                        <?php if(isset($error_str) && $error_str != '') { ?>
-                            <h4 class="text-danger text-center"><?php echo $error_str; ?></h4>
-                        <?php } ?>
-                        
-                        <input type="hidden" name="action" value="addCriteria"/>
-
-                        <div class="form-group">
-                            <label for="title" class="cols-xs-2 control-label text-warning">Title</label>
-                            <div class="cols-xs-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-clipboard fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="title" id="title"  placeholder="Enter criteria title" required/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="title" class="cols-xs-2 control-label text-warning">Status</label>
-                            <div class="cols-xs-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-clipboard fa" aria-hidden="true"></i></span>
-                                    <select class="form-control" disabled>
-                                        <option value="2">Active</option>
-                                        <option value="3">Suspended</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-lg btn-block">Add</button>
-                        </div>
-                    </form>
-                </div><!-- /.col-xs-12 -->
-            </div><!-- /.row -->
-        </div><!-- /.col-md-6 col-md-offset-3 -->
     </div><!-- /.row -->
 </div>
 

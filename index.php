@@ -24,7 +24,7 @@ $page_request_sys = "/{$page_request_clean}.php";
 // Check if requested page exists
 if($_SERVER['REQUEST_URI'] == '' || $_SERVER['REQUEST_URI'] == '/') {
     if($auth_user) {
-        header('Location: /home');
+        header('Location: /manual_input');
         exit();
     } else {
         header('Location: /login');
