@@ -55,7 +55,7 @@ require_once APP_ROOT.'/inc/page_begin.php';
                             <?php if(!empty($boundrySet)) {
                                 foreach($boundrySet as $boundry) : ?>
                                     <tr>
-                                        <form method="get">
+                                        <form method="post">
                                             <input type="hidden" name="action" value="updateBoundry">
                                             <input type="hidden" name="boundry_id" value="<?php echo $boundry->id; ?>">
                                             <input type="hidden" name="limit_id" value="<?php echo isset($boundry->limitData->id) ? $boundry->limitData->id : ''; ?>">

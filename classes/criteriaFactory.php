@@ -75,6 +75,8 @@ class CriteriaFactory
      * @return /Criteria object
      */
     public function newCriteria($title, User $user) {
+        $title = trim($title);
+
         // Save to DB
         $query = "  INSERT INTO `au_criteria`
                     (
@@ -105,6 +107,8 @@ class CriteriaFactory
      * @return /Criteria object
      */
     public function updateCriteria(Criteria $criteria, User $user) {
+        $title = trim($title);
+
         // Save to DB
         $query = "  UPDATE  `au_criteria`
                     SET     `title` = :title,

@@ -24,7 +24,7 @@ $criteriaFactory = new CriteriaFactory($pdo);
 $criteriaSet = $criteriaFactory->getCriteriaByUser($auth_user);
 
 $yearFactory = new YearFactory($pdo);
-$yearSet = $yearFactory->getYearByUser($auth_user);
+$yearSet = $yearFactory->getYearsByUser($auth_user);
 
 //------------------------------------------------------------------
 // Boundry form processing
@@ -51,55 +51,4 @@ if($action == 'ajax') {
 
     // Exit here so we don't log this request
     exit();
-}
-
-if($action == 'process' || $action == 'download') {
-    // Fetch Data
-    $names = isset($_GET['name']) ? $_GET['name'] : array();
-    $names = isset($_POST['name']) ? $_POST['name'] : $names;
-
-    $criteriaData = array();
-    foreach ($criteriaSet as $criteria) {
-        $criteriaTitle = $criteria->title;
-        $criteriaTitleVV = $criteriaTitle.'_variable_variable';
-
-        $$criteriaTitleVV = isset($_GET[$criteria->id]) ? $_GET[$criteria->id] : array();
-        $$criteriaTitleVV = isset($_POST[$criteria->id]) ? $_POST[$criteria->id] : $$criteriaTitleVV;
-
-        $criteriaData[$criteriaTitle] = $$criteriaTitleVV;
-    }
-
-    $years = isset($_GET['year']) ? $_GET['year'] : array();
-    $years = isset($_POST['year']) ? $_POST['year'] : $years;
-
-    // Convert from row to column data
-    $children = array();
-    foreach ($names as $index=>$value) {
-        $row = array();
-
-        $row['name'] = $names[$index];
-            
-        foreach ($criteriaSet as $criteria) {
-            $row[$criteria->title] = $criteriaData[$criteria->title][$index];
-        }
-
-        $row['year'] = $years[$index];
-
-        $children[] = $row;
-    }
-
-    // Process children
-    foreach($children as $index=>$child) {
-        $children[$index] = processChild($auth_user, $child);
-    }
-}
-
-if($action == 'process') {
-    // Display data
-    require_once (VIEW_ROOT.'/output.php');
-}
-
-if($action == 'download') {
-    // Download data
-    downloadChildren($criteriaSet, $children);
 }

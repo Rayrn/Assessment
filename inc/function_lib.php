@@ -130,7 +130,7 @@ function processChild(User $user, Array $child) {
     // Calculate Grouping Data
     $grouping = 0;
     foreach($criteriaSet as $criteria) {
-        switch ($child[$criteria->title]) {
+        switch ($child[strtolower($criteria->title)]) {
             case 'L': $grouping += 1; break;
             case 'M': $grouping += 2; break;
             case 'H': $grouping += 3; break;
@@ -158,7 +158,7 @@ function get_output_row_full($criteriaSet, $child) {
 
     // Build criteria select menu's as one block
     foreach($criteriaSet as $criteria) {
-        $criteria_string .= $child[$criteria->title].' ';
+        $criteria_string .= $child[strtolower($criteria->title)].' ';
     }
 
     // Add into structure
@@ -188,7 +188,7 @@ function get_output_row_mobile($criteriaSet, $child) {
 
     // Build criteria select menu's as one block
     foreach($criteriaSet as $criteria) {
-        $criteria_string .= $child[$criteria->title].' ';
+        $criteria_string .= $child[strtolower($criteria->title)].' ';
     }
 
     // Add into structure
@@ -256,7 +256,7 @@ function downloadChildren($criteriaSet, $children) {
         $row = array();
         $row['Name'] = $child['name'];
         foreach($criteriaSet as $criteria) {
-            $row[$criteria->title] = $child[$criteria->title];
+            $row[$criteria->title] = $child[strtolower($criteria->title)];
         }
         $row['Year'] = $child['year']->title;
         $row['Boundry'] = $child['boundry']->title;
@@ -282,4 +282,35 @@ function downloadChildren($criteriaSet, $children) {
     }
 
     fclose($output);
+}
+
+/**
+ * Process a CSV filled with child data
+ * @param $_FILES['XYZ'] $csvInput[] CSV File (with header row)
+ * @return Array $CSV
+ */
+function processCSV($csvInput) {
+    // Init
+    $csv = array();
+
+    // Open file
+    $handle = fopen($csvInput['tmp_name'], "r");
+
+    // Process file  
+    while($data = fgetcsv($handle)) {
+        $csv[] = $data;
+    }
+
+    // Close file
+    fclose($handle);
+
+    // Seperate out header row
+    $headers = array_map('strtolower', array_shift($csv));
+    
+    // Convert to associative array
+    foreach($csv as $index=>$row) {
+        $csv[$index] = array_combine($headers, $row);
+    }
+
+    return $csv;
 }

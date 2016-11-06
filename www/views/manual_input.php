@@ -20,11 +20,9 @@ require_once APP_ROOT.'/inc/page_begin.php';
         </div>
 
         <div class="col-xs-12">
-            <form method="get" class="pull-right">
-                <button type="button" class="btn btn-warning" title="Add" alt="Add" id="add-row">
+                <button type="button" class="btn btn-warning pull-right" title="Add" alt="Add" id="add-row">
                     <i class="fa fa-plus-circle"></i>&nbsp;Add additional row
                 </button>
-            </form>
         </div><!-- /.col-xs-12 -->
 
         <div class="col-xs-12">
@@ -33,7 +31,7 @@ require_once APP_ROOT.'/inc/page_begin.php';
             <?php } ?>
 
             <?php if(!empty($criteriaSet)) { ?>
-                <form method="get">
+                <form method="post" action="results">
                     <table class="table table-striped hidden-xs" id="full-input">
                         <thead>
                             <tr>
@@ -52,7 +50,7 @@ require_once APP_ROOT.'/inc/page_begin.php';
                             <tr id="spacer-row-full"><td><!-- Add a blank row to A) add space and B) preserve correct table striping --></td></tr>
                             <tr>
                                 <td colspan="6">
-                                    <button type="submit" class="btn btn-success btn-lg btn-block hidden-xs" title="Check" alt="Check">
+                                    <button type="submit" class="btn btn-success btn-lg btn-block hidden-xs" title="Save" alt="Save">
                                         <i class="fa fa-check"></i>&nbsp;Save
                                     </button>
                                 </td>
@@ -61,7 +59,7 @@ require_once APP_ROOT.'/inc/page_begin.php';
                     </table>
                 </form>
 
-                <form method="get">
+                <form method="post">
                     <table class="table table-striped visible-xs" id="mobile-input">
                         <tbody>
                             <input type="hidden" name="action" value="process">
@@ -71,7 +69,7 @@ require_once APP_ROOT.'/inc/page_begin.php';
                             <tr id="spacer-row-mobile"><td><!-- Add a blank row to A) add space and B) preserve correct table striping --></td></tr>
                             <tr>
                                 <td>
-                                    <button type="submit" class="btn btn-success btn-lg btn-block visible-xs" title="Check" alt="Check">
+                                    <button type="submit" class="btn btn-success btn-lg btn-block visible-xs" title="Save" alt="Save">
                                         <i class="fa fa-check"></i>&nbsp;Save
                                     </button>
                                 </td>

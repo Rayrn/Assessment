@@ -23,7 +23,7 @@ $action = isset($_POST['action']) ? $_POST['action'] : $action;
 $yearFactory = new YearFactory($pdo);
 
 // Fetch list of year
-$yearSet = $yearFactory->getYearByUser($auth_user, 'saved');
+$yearSet = $yearFactory->getYearsByUser($auth_user, 'saved');
 
 //------------------------------------------------------------------
 // Year form processing

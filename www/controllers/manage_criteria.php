@@ -40,7 +40,7 @@ if($action == 'updateCriteria') {
     $criteria = $criteriaFactory->getCriteria($id);
 
     // Fetch update details
-    $title = isset($_GET['title']) ? $_GET['title'] : $criteria->title;
+    $title = isset($_GET['title']) ? $_GET['title'] : strtolower($criteria->title);
     $title = isset($_POST['title']) ? $_POST['title'] : $title;
     $status = isset($_GET['status']) ? $_GET['status'] : $criteria->status;
     $status = isset($_POST['status']) ? $_POST['status'] : $status;

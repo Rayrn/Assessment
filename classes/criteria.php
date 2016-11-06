@@ -80,7 +80,7 @@ class Criteria
                 break;
             case 'status':
                 $this->status = $val;
-                $this->statusDesc = $this->getStatus->$val;
+                $this->statusDesc = $this->getStatus($val);
                 break;
         }
     }

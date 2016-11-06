@@ -87,6 +87,10 @@ class UserFactory
      * @return /User object
      */
     public function newUser($first_name, $last_name, $email, $password) {
+        $first_name = trim($first_name);
+        $last_name = trim($last_name);
+        $email = trim($email);
+
         // Create salt
         $hashPW = password_hash($password, PASSWORD_BCRYPT);
 

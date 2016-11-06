@@ -13,7 +13,7 @@ require_once APP_ROOT.'/inc/page_begin.php';
         <div class="col-xs-12">
             <div class="panel-heading">
                <div class="panel-title text-center">
-                    <h1 class="title text-warning">Manual Input</h1>
+                    <h1 class="title text-warning">Results</h1>
                     <hr />
                 </div>
             </div>
@@ -25,13 +25,13 @@ require_once APP_ROOT.'/inc/page_begin.php';
             <?php } ?>
 
             <?php if(!empty($children)) { ?>
-                <form method="get" class="pull-right">
+                <form method="post" class="pull-right" action="results">
                     <input type="hidden" name="action" value="download">
 
                     <?php foreach($children as $child) : ?>
                         <input type="hidden" name="name[]" value="<?php echo $child['name']; ?>" />
                         <?php foreach($criteriaSet as $criteria) { ?>
-                            <input type="hidden" name="<?php echo $criteria->id; ?>[]" value="<?php echo $child[$criteria->title]; ?>" />
+                            <input type="hidden" name="<?php echo $criteria->id; ?>[]" value="<?php echo $child[strtolower($criteria->title)]; ?>" />
                         <?php } ?>
                         <input type="hidden" name="year[]" value="<?php echo $child['year']->id; ?>" />
                     <?php endforeach; ?>

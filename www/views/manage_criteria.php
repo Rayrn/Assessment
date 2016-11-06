@@ -31,13 +31,14 @@ require_once APP_ROOT.'/inc/page_begin.php';
                             <tr>
                                 <th class="col-xs-8">Title</th>
                                 <th class="col-xs-3">Status</th>
+                                <th class="col-xs-1"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if(!empty($criteriaSet)) {
                                 foreach($criteriaSet as $criteria) : ?>
                                     <tr>
-                                        <form method="get">
+                                        <form method="post">
                                             <input type="hidden" name="action" value="updateCriteria">
                                             <input type="hidden" name="id" value="<?php echo $criteria->id; ?>">
 
@@ -56,6 +57,11 @@ require_once APP_ROOT.'/inc/page_begin.php';
                                                         ?>
                                                     </select>
                                                 </div><!-- /.form-group -->
+                                            </td>
+                                            <td>
+                                                <button type="submit" class="btn btn-success" title="Save" alt="Save">
+                                                    <i class="fa fa-check"></i>
+                                                </button>
                                             </td>
                                         </form>
                                     </tr>

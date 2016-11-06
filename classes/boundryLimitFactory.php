@@ -82,7 +82,9 @@ class BoundryLimitFactory
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if(!$row) {
-            return FALSE;
+            // Create new limit set
+            $newLimit = $this->newBoundryLimit($boundry, $year, '0', '0', $user);
+            $row['id'] = $newLimit->id;
         }
 
         // Return BoundryLimit array

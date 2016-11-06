@@ -99,6 +99,8 @@ class BoundryFactory
      * @return /Boundry object
      */
     public function newBoundry($title, User $user) {
+        $title = trim($title);
+
         // Save to DB
         $query = "  INSERT INTO `au_boundry`
                     (
@@ -116,7 +118,7 @@ class BoundryFactory
                     )";
 
         $stmt = $this->db->prepare($query);
-            $stmt->bindParam(':grouping', $grouping, PDO::PARAM_STR);
+            $stmt->bindParam(':grouping', $grouping, PDO::PARAM_INT);
             $stmt->bindParam(':title', $title, PDO::PARAM_STR);
             $stmt->bindParam(':user_id', $user->id, PDO::PARAM_STR);
             $stmt->execute();
@@ -132,6 +134,8 @@ class BoundryFactory
      * @return /Boundry object
      */
     public function updateBoundry(Boundry $boundry, User $user) {
+        $title = trim($title);
+
         // Save to DB
         $query = "  UPDATE  `au_boundry`
                     SET     `title` = :title,

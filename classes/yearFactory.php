@@ -43,10 +43,40 @@ class YearFactory
     /**
      * Fetch a list of all year setup by the user from the DB
      * @param /User $user Current user
+     * @param string $title Title to match
      * @param string $status 'Active', 'Saved', 'All'
      * @return /Year[]
      */
-    public function getYearByUser(User $user, $status = 'active') {
+    public function getYearByTitle(User $user, $title, $status = 'active') {
+        // Check if Year match can be found in DB
+        $query = "SELECT `id` FROM `au_year` WHERE `create_by` = :user_id AND `title` = :title";
+        switch(strtolower($status)) {
+            case 'active': $query .= " AND `status` = '2' "; break;
+            case 'saved': $query .= " AND (`status` = '2' OR `status` = '3') "; break;
+            case 'all': break;
+        }
+
+        $stmt = $this->db->prepare($query);
+            $stmt->bindParam(':user_id', $user->id, PDO::PARAM_INT);
+            $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+            $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        if(!$row) {
+            return FALSE;
+        }
+
+        // Create and return Year object
+        return $this->getYear($row['id']);;
+    }
+
+    /**
+     * Fetch a list of all year setup by the user from the DB
+     * @param /User $user Current user
+     * @param string $status 'Active', 'Saved', 'All'
+     * @return /Year[]
+     */
+    public function getYearsByUser(User $user, $status = 'active') {
         // Check if Year match can be found in DB
         $query = "SELECT `id` FROM `au_year` WHERE `create_by` = :user_id";
         switch(strtolower($status)) {
@@ -75,6 +105,8 @@ class YearFactory
      * @return /Year object
      */
     public function newYear($title, User $user) {
+        $title = trim($title);
+
         // Save to DB
         $query = "  INSERT INTO `au_year`
                     (
@@ -90,7 +122,7 @@ class YearFactory
                     )";
 
         $stmt = $this->db->prepare($query);
-            $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+            $stmt->bindParam(':title', trim($title), PDO::PARAM_STR);
             $stmt->bindParam(':user_id', $user->id, PDO::PARAM_STR);
             $stmt->execute();
 
@@ -105,6 +137,8 @@ class YearFactory
      * @return /Year object
      */
     public function updateYear(Year $year, User $user) {
+        $title = trim($title);
+        
         // Save to DB
         $query = "  UPDATE  `au_year`
                     SET     `title` = :title,

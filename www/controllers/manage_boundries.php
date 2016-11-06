@@ -24,7 +24,7 @@ $boundryFactory = new BoundryFactory($pdo);
 $boundrySet = $boundryFactory->getBoundryByUser($auth_user);
 
 $yearFactory = new YearFactory($pdo);
-$yearSet = $yearFactory->getYearByUser($auth_user);
+$yearSet = $yearFactory->getYearsByUser($auth_user);
 
 $boundryLimitFactory = new BoundryLimitFactory($pdo);
 

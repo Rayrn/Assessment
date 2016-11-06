@@ -31,13 +31,14 @@ require_once APP_ROOT.'/inc/page_begin.php';
                             <tr>
                                 <th class="col-xs-8">Title</th>
                                 <th class="col-xs-3">Status</th>
+                                <th class="col-xs-1"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if(!empty($yearSet)) {
                                 foreach($yearSet as $year) : ?>
                                     <tr>
-                                        <form method="get">
+                                        <form method="post">
                                             <input type="hidden" name="action" value="updateYear">
                                             <input type="hidden" name="id" value="<?php echo $year->id; ?>">
 
@@ -63,6 +64,11 @@ require_once APP_ROOT.'/inc/page_begin.php';
                                                     </a>
                                                 <?php } ?>
                                             </td>
+                                            <td>
+                                                <button type="submit" class="btn btn-success" title="Save" alt="Save">
+                                                    <i class="fa fa-check"></i>
+                                                </button>
+                                            </td>
                                         </form>
                                     </tr>
                                 <?php endforeach;
@@ -83,7 +89,7 @@ require_once APP_ROOT.'/inc/page_begin.php';
                     <button type="button" class="btn btn-success pull-right" data-toggle="collapse" data-target="#add-year-form">Add new year</button>
                 </div>
                 <div class="col-xs-12 collapse" id="add-year-form">
-                    <form method="get">
+                    <form method="post">
                         
                         <?php if(isset($error_str) && $error_str != '') { ?>
                             <h4 class="text-danger text-center"><?php echo $error_str; ?></h4>

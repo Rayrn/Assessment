@@ -12,7 +12,6 @@ class Boundry
     public $status;
     public $statusDesc;
     public $createBy;
-    public $limitData;
 
     /**
      * Create a new Boundry object
@@ -95,15 +94,6 @@ class Boundry
         }
 
         return $groupingSets;
-    }
-
-    /**
-     * Add limit data into object
-     * @input /BoundryLimit[] $data Array of boundry limit objects
-     * @return void
-     */
-    public function addLimitData($data) {
-        $this->limitData = $data;
     }
 
     /**
