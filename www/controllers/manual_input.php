@@ -6,7 +6,7 @@ if(!defined('APP_ROOT')) {
 
 // Check if the user is allowed to access this page
 if(!$auth_user) {
-    header("Location: ".WEB_ROOT);
+    header("Location: /");
     exit();
 }
 
@@ -53,7 +53,7 @@ if($action == 'ajax') {
     exit();
 }
 
-if($action == 'process') {
+if($action == 'process' || $action == 'download') {
     // Fetch Data
     $names = isset($_GET['name']) ? $_GET['name'] : array();
     $names = isset($_POST['name']) ? $_POST['name'] : $names;
@@ -77,13 +77,13 @@ if($action == 'process') {
     foreach ($names as $index=>$value) {
         $row = array();
 
-        $row['Name'] = $names[$index];
+        $row['name'] = $names[$index];
             
         foreach ($criteriaSet as $criteria) {
             $row[$criteria->title] = $criteriaData[$criteria->title][$index];
         }
 
-        $row['Year'] = $years[$index];
+        $row['year'] = $years[$index];
 
         $children[] = $row;
     }
@@ -92,13 +92,14 @@ if($action == 'process') {
     foreach($children as $index=>$child) {
         $children[$index] = processChild($auth_user, $child);
     }
+}
 
-    var_dump($children);
-
+if($action == 'process') {
     // Display data
     require_once (VIEW_ROOT.'/output.php');
 }
 
 if($action == 'download') {
-    
+    // Download data
+    downloadChildren($criteriaSet, $children);
 }
