@@ -4,6 +4,9 @@ if(!defined('APP_ROOT')) {
     exit('No direct script access allowed');
 }
 
+// Set response code 404
+header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
+
 // Load page head (vary based on user status)
 require_once $auth_user ? APP_ROOT.'/inc/page_begin.php' : APP_ROOT.'/inc/clean_page_begin.php';
 ?>
