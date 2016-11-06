@@ -98,7 +98,7 @@ class BoundryFactory
      * @param /User $user Current user
      * @return /Boundry object
      */
-    public function newBoundry($title, User $user) {
+    public function newBoundry($grouping, $title, User $user) {
         $title = trim($title);
 
         // Save to DB

@@ -23,4 +23,4 @@ define('TIMEOUT_MINS', '180');                          // maximum time between 
 define('SITE_BRAND', 'Student Assessment Automation');
 
 // Site Toggles
-define('ALLOW_REG', FALSE);                             // Allow/Disallow new users to register
+define('ALLOW_REG', TRUE);                              // Allow/Disallow new users to register

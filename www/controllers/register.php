@@ -94,6 +94,27 @@ if($action == 'register') {
         $userFactory = new UserFactory($pdo);
         $user = $userFactory->newUser($first_name, $last_name, $email, $password_1);
 
+        // Create various DB fields
+        $criteriaFactory = new CriteriaFactory($pdo);
+        $criteriaFactory->newCriteria('Homework', $user);
+        $criteriaFactory->newCriteria('Creating', $user);
+        $criteriaFactory->newCriteria('Performing', $user);
+        $criteriaFactory->newCriteria('Responding', $user);
+
+        $boundryFactory = new BoundryFactory($pdo);
+        $boundryFactory->newBoundry('4', 'Emerging (Lower Band)', $user);
+        $boundryFactory->newBoundry('5', 'Emerging (Top Band)', $user);
+        $boundryFactory->newBoundry('6', 'Developing (Low-Middle Band)', $user);
+        $boundryFactory->newBoundry('7', 'Developing (Higher Band)', $user);
+        $boundryFactory->newBoundry('8', 'Secure (Lower Band)', $user);
+        $boundryFactory->newBoundry('9', 'Secure (Middle Band)', $user);
+        $boundryFactory->newBoundry('10', 'Secure (Higher Band)', $user);
+        $boundryFactory->newBoundry('11', 'Exceeding (Lower Band)', $user);
+        $boundryFactory->newBoundry('12', 'Exceeding (Higher Band)', $user);
+
+        $yearFactory = new YearFactory($pdo);
+        $yearFactory->newYear('Year 7', $user);
+
         // Log request
         require_once APP_ROOT.'/inc/log.php';
 
