@@ -101,3 +101,35 @@ function get_input_row_mobile($criteriaSet, $yearSet) {
     // Return output
     return $row_string;                
 }
+
+function processChild(User $user, Array $child) {
+    // Fetch SQL Connection
+    global $pdo;
+
+    // Setup Factories
+    $boundryFactory = new BoundryFactory($pdo);
+    $criteriaFactory = new CriteriaFactory($pdo);
+    $yearFactory = new YearFactory($pdo);
+    $boundryLimitFactory = new BoundryLimitFactory($pdo);
+
+    // Fetch Supporting Data
+    $criteriaSet = $criteriaFactory->getCriteriaByUser($user);
+
+    // Calculate Grouping Data
+    $grouping = 0;
+    foreach($criteriaSet as $criteria) {
+        switch ($child[$criteria->title]) {
+            case 'L': $grouping += 1; break;
+            case 'M': $grouping += 2; break;
+            case 'H': $grouping += 3; break;
+            default: $grouping += 0; break;
+        }
+    }
+
+    // Fetch Data
+    $child['year'] = $yearFactory->getYear($child['Year']);
+    $child['boundry'] = $boundryFactory->getBoundryByGrouping($user, $grouping);
+    $child['limit'] = $boundryLimitFactory->getBoundryLimitByAll($child['boundry'], $child['year'], $user);
+
+    return $child;
+}

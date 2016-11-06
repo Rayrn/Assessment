@@ -66,6 +66,30 @@ class BoundryFactory
         // Return Boundry array
         return $results;
     }
+
+    /**
+     * Fetch a list of all boundry setup by the user from the DB
+     * @param /User $user Current user
+     * @param string $status 'Active', 'Saved', 'All'
+     * @return /Boundry[]
+     */
+    public function getBoundryByGrouping(User $user, $grouping) {
+        // Check if Boundry match can be found in DB
+        $query = "SELECT `id` FROM `au_boundry` WHERE `create_by` = :user_id AND `grouping` = :grouping";
+
+        $stmt = $this->db->prepare($query);
+            $stmt->bindParam(':user_id', $user->id, PDO::PARAM_INT);
+            $stmt->bindParam(':grouping', $grouping, PDO::PARAM_INT);
+            $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        if(!$row) {
+            return FALSE;
+        }
+
+        // Return Boundry array
+        return $this->getBoundry($row['id']);
+    }
     
     /**
      * Create and save a new Boundry

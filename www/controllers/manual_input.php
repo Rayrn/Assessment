@@ -90,8 +90,10 @@ if($action == 'process') {
 
     // Process children
     foreach($children as $index=>$child) {
-        $children[$index] = processChild($child);
+        $children[$index] = processChild($auth_user, $child);
     }
+
+    var_dump($children);
 
     // Display data
     require_once (VIEW_ROOT.'/output.php');
