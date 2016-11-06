@@ -25,7 +25,7 @@ if(!defined('APP_ROOT')) {
     <link type="text/css" rel="stylesheet" href="/assets/css/ionicons.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="/assets/css/assessment.css" rel="stylesheet">
+    <link href="<?php echo STYLE_ROOT; ?>/assessment.css" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-icon-57x57.png">

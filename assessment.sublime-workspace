@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"cri",
+				"criteriaData"
+			],
+			[
+				"criter",
+				"criteria"
+			],
+			[
+				"spacer",
+				"spacer-row-full\t(manual_input.php)"
+			],
+			[
+				"year",
+				"year_options"
+			],
+			[
+				"get_input",
+				"get_input_row_full\t(function_lib)"
+			],
+			[
+				"row",
+				"row_string"
+			],
+			[
+				"Criter",
+				"criteriaFactory"
+			],
+			[
 				"acti",
 				"activeYear"
 			],
@@ -52,20 +80,12 @@
 				"require_once\t(manage_criteria.php)"
 			],
 			[
-				"criter",
-				"criteriaFactory"
-			],
-			[
 				"crit",
 				"criteria"
 			],
 			[
 				"status",
 				"statusDesc"
-			],
-			[
-				"cri",
-				"criteria"
 			],
 			[
 				"Crit",
@@ -268,30 +288,20 @@
 	"buffers":
 	[
 		{
-			"file": "www/views/manage_boundries.php",
+			"file": "www/controllers/manual_input.php",
 			"settings":
 			{
-				"buffer_size": 5727,
+				"buffer_size": 2987,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "www/controllers/manage_boundries.php",
+			"file": "www/controllers/manage_years.php",
 			"settings":
 			{
-				"buffer_size": 4332,
-				"encoding": "UTF-8",
+				"buffer_size": 2924,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": ".gitignore",
-			"settings":
-			{
-				"buffer_size": 25,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -334,6 +344,7 @@
 	[
 		"/D/wamp/www/assessment",
 		"/D/wamp/www/assessment/assets",
+		"/D/wamp/www/assessment/assets/js",
 		"/D/wamp/www/assessment/classes",
 		"/D/wamp/www/assessment/inc",
 		"/D/wamp/www/assessment/www",
@@ -342,13 +353,22 @@
 	],
 	"file_history":
 	[
+		"/D/wamp/www/assessment/inc/function_lib.php",
+		"/D/wamp/www/assessment/assets/js/assessment.js",
+		"/D/wamp/www/assessment/www/views/manual_input.php",
+		"/D/wamp/www/assessment/www/controllers/manual_input.php",
+		"/D/wamp/www/assessment/inc/script_secure.php",
+		"/D/wamp/www/assessment/www/views/manage_boundries.php",
+		"/D/wamp/www/assessment/www/snippets/input_row_mobile.php",
+		"/D/wamp/www/assessment/www/controllers/manage_criteria.php",
+		"/D/wamp/www/assessment/www/controllers/manage_boundries.php",
+		"/D/wamp/www/assessment/classes/criteriaFactory.php",
+		"/D/wamp/www/assessment/.gitignore",
 		"/D/wamp/www/assessment/www/views/manage_years.php",
 		"/D/wamp/www/assessment/www/views/manage_criteria.php",
 		"/D/wamp/www/assessment/www/controllers/manage_years.php",
 		"/D/wamp/www/assessment/inc/page_begin.php",
 		"/D/wamp/www/assessment/classes/boundryLimit.php",
-		"/D/wamp/www/assessment/www/controllers/manage_boundries.php",
-		"/D/wamp/www/assessment/www/views/manage_boundries.php",
 		"/D/wamp/www/assessment/index.php",
 		"/D/wamp/www/assessment/classes/boundryLimitFactory.php",
 		"/D/wamp/logs/mysql_general.log",
@@ -357,19 +377,15 @@
 		"/D/wamp/www/assessment/assets/css/assessment.css",
 		"/D/wamp/www/assessment/classes/yearFactory.php",
 		"/D/wamp/www/assessment/classes/boundry.php",
-		"/D/wamp/www/assessment/inc/script_secure.php",
 		"/D/wamp/www/assessment/www/error_pages/404.php",
 		"/D/wamp/www/assessment/www/error_pages/generic.php",
 		"/D/wamp/www/assessment/www/views/register.php",
 		"/D/wamp/www/assessment/www/views/logout.php",
 		"/D/wamp/www/assessment/www/views/login.php",
 		"/D/wamp/www/assessment/inc/clean_page_begin.php",
-		"/D/wamp/www/assessment/inc/function_lib.php",
 		"/D/wamp/www/assessment/www/controllers/register.php",
 		"/D/wamp/www/assessment/www/controllers/login.php",
 		"/D/wamp/www/assessment/classes/validation.php",
-		"/D/wamp/www/assessment/classes/criteriaFactory.php",
-		"/D/wamp/www/assessment/www/controllers/manage_criteria.php",
 		"/D/wamp/www/assessment/classes/criteria.php",
 		"/D/wamp/www/assessment/classes/security.php",
 		"/D/wamp/www/assessment/classes/user.php",
@@ -390,7 +406,6 @@
 		"/D/wamp/www/filerw/index.php",
 		"/D/wamp/www/filerw/vendor/autoload.php",
 		"/D/wamp/www/order/index.php",
-		"/D/wamp/www/assessment/assets/js/assessment.js",
 		"/D/wamp/www/assessment/inc/page_end.php",
 		"/D/wamp/www/assessment/inc/db_connect.php",
 		"/D/wamp/www/assessment/inc/db_connect",
@@ -469,6 +484,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"\"",
 			"Criteria",
 			"criteria",
 			"Criteria",
@@ -513,6 +529,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'",
 			"Year",
 			"year",
 			"Year",
@@ -538,24 +555,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "www/views/manage_boundries.php",
+					"file": "www/controllers/manual_input.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5727,
+						"buffer_size": 2987,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1173,
-								1173
+								2942,
+								2942
 							]
 						],
 						"settings":
@@ -565,27 +582,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1242.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "www/controllers/manage_boundries.php",
-					"semi_transient": false,
+					"file": "www/controllers/manage_years.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 4332,
+						"buffer_size": 2924,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1570,
-								1570
+								0,
+								0
 							]
 						],
 						"settings":
@@ -595,38 +612,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 972.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": ".gitignore",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 25,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								25,
-								25
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]

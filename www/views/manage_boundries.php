@@ -86,7 +86,7 @@ require_once APP_ROOT.'/inc/page_begin.php';
                                             <td>
                                                 <button type="submit" class="btn btn-success" title="Save" alt="Save">
                                                     <i class="fa fa-check"></i>
-                                                </a>
+                                                </button>
                                             </td>
                                         </form>
                                     </tr>

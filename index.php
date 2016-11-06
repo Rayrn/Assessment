@@ -32,12 +32,12 @@ if($_SERVER['REQUEST_URI'] == '' || $_SERVER['REQUEST_URI'] == '/') {
     }
 } else {
     // Check if file exists
-    if(file_exists(APP_ROOT.CONTROL_ROOT.$page_request_sys)) {
+    if(file_exists(CONTROL_ROOT.$page_request_sys)) {
         // Include controller
-        require_once APP_ROOT.CONTROL_ROOT.$page_request_sys;
+        require_once CONTROL_ROOT.$page_request_sys;
     } else {
         // Redirect to 404
-        require_once APP_ROOT.ERROR_ROOT.'/404.php';
+        require_once ERROR_ROOT.'/404.php';
     }
 }
 /********************

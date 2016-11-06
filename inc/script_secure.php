@@ -22,3 +22,6 @@ require_once 'db_connect.php';
 
 // Check if user is authorised
 $auth_user = Security::isAuth($pdo);
+
+// Include Function Library
+require_once APP_ROOT.'/inc/function_lib.php';
