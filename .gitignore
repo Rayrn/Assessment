@@ -2,3 +2,6 @@ bin/
 vendor/
 
 *.sublime-*
+sftp-config.json
+
+inc/db_connect.php
