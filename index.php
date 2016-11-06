@@ -20,14 +20,13 @@ $page_request_parts = explode('?', $_SERVER['REQUEST_URI']);
 $page_request_clean = basename($page_request_parts[0], '.php');
 $page_request_sys = "/{$page_request_clean}.php";
 
-
 // Check if requested page exists
-if($_SERVER['REQUEST_URI'] == '' || $_SERVER['REQUEST_URI'] == '/') {
+if($_SERVER['REQUEST_URI'] == WEB_DIR || $_SERVER['REQUEST_URI'] == '/') {
     if($auth_user) {
-        header('Location: /manual_input');
+        header('Location: '.WEB_ROOT.'/manual_input');
         exit();
     } else {
-        header('Location: /login');
+        header('Location: '.WEB_ROOT.'/login');
         exit();
     }
 } else {

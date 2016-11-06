@@ -6,7 +6,7 @@ if(!defined('APP_ROOT')) {
 
 // Check if the user is allowed to access this page
 if(!$auth_user) {
-    header("Location: /");
+    header('Location: '.WEB_ROOT);
     exit();
 }
 
@@ -115,7 +115,7 @@ if($action == 'updateBoundry') {
         require_once APP_ROOT.'/inc/log.php';
 
         // Send to index
-        header ('Location: /manage_boundries');
+        header('Location: '.WEB_ROOT.'/manage_boundries');
         exit();
     }
 }

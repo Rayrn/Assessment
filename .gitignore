@@ -1,7 +1,3 @@
-bin/
-vendor/
-
+*db_connect.php
 *.sublime-*
 sftp-config.json
-
-inc/db_connect.php

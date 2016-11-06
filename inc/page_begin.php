@@ -15,7 +15,7 @@ require_once APP_ROOT.'/inc/clean_page_begin.php';
             <span class="icon-bar"></span> 
         </button>
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"><?php echo SITE_BRAND; ?></a>
+            <a class="navbar-brand" href="<?php echo WEB_ROOT; ?>"><?php echo SITE_BRAND; ?></a>
         </div>
         <div class="collapse navbar-collapse" id="siteNav">
             <ul class="nav navbar-nav">

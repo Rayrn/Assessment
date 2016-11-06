@@ -6,7 +6,7 @@ if(!defined('APP_ROOT')) {
 
 // Check if the user is allowed to access this page
 if($auth_user) {
-    header("Location: /");
+    header('Location: '.WEB_ROOT);
     exit();
 }
 
@@ -76,7 +76,7 @@ if($action == 'login') {
         require_once APP_ROOT.'/inc/log.php';
 
         // Send to index
-        header ('Location: /');
+        header('Location: '.WEB_ROOT);
         exit();
     }
 }

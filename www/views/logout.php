@@ -25,7 +25,7 @@ require_once APP_ROOT.'/inc/clean_page_begin.php';
                 <p class="error-text">
                     See you soon!
                 </p>
-                <a href="/" class="btn btn-warning btn-lg btn-block"><span class="fa fa-home"></span>&nbsp;Take Me Home </a>
+                <a href="<?php echo WEB_ROOT; ?>" class="btn btn-warning btn-lg btn-block"><span class="fa fa-home"></span>&nbsp;Take Me Home </a>
                 </div><!-- /.col-xs-12 -->
             </div><!-- /.row -->
         </div><!-- /.col-md-6 col-md-offset-3 -->
